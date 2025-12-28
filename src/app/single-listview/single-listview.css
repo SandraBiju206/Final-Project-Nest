@@ -1,0 +1,58 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.card {
+    background: white;
+    border: none;
+    /* border-radius: 8px; */
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    /* Amazon details are left aligned mostly */
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout for details usually? Or stick to vertical for simplicity but styled better */
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.products-img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #0F1111;
+    line-height: 1.3;
+}
+
+.card p {
+    font-size: 1.5rem;
+    color: #B12704;
+    /* Amazon Red */
+    font-weight: 500;
+}

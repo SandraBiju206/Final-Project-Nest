@@ -1,0 +1,56 @@
+<div id="carouselExampleAutoplaying" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let image of carouselImages; let i = index"
+            [class.active]="i === currentSlide">
+            <img [src]="image.src" class="d-block w-100" [alt]="image.alt">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="display-4 title">{{ image.title }}</h1>
+                <p class="lead description">{{ image.description }}</p>
+                <a routerLink="/product" class="btn btn-primary btn-lg mt-4 button">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" (click)="prevSlide()">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" (click)="nextSlide()">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<div class="about-section">
+    <h2 class="mb-4">About Our Store</h2>
+    <p class="lead text-muted">
+        Welcome to our premier online shopping destination. We are dedicated to providing you with the very best
+        of products, with a focus on dependability, customer service, and uniqueness. Founded in 2024, our store
+        has come a long way from its beginnings. We now serve customers all over the world and are thrilled to
+        be a part of the fair trade wing of the industry. We hope you enjoy our products as much as we enjoy
+        offering them to you.
+    </p>
+</div>
+
+<div class="container mt-5 mb-5 features">
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 h-100">
+                <h3>Quality Products</h3>
+                <p>We source only the best items for our customers, ensuring durability and style.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 h-100">
+                <h3>Fast Shipping</h3>
+                <p>Get your orders delivered to your doorstep quickly and securely within 3-5 days.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 h-100">
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is here to help you anytime, anywhere.</p>
+            </div>
+        </div>
+    </div>
+</div>

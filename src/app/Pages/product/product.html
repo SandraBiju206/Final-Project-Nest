@@ -1,0 +1,18 @@
+<div class="box">
+  <div class="grid">
+
+    @for (item of products; track item.id) {
+    <div>
+      <div class="card">
+        <img src="{{item.thumbnail}}" alt="product image" class="img" />
+        <div class="body">
+          <h2 class="title">{{item.title}}</h2>
+          <p class="price">{{item.price}}</p>
+          <a [routerLink]="['/single-listview',item.id]" class="btn">View Details</a>
+        </div>
+      </div>
+    </div>
+    }
+
+  </div>
+</div>
